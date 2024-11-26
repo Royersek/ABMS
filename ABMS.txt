@@ -1,0 +1,123 @@
+1) INSERT INTO autos (marca, modelo, año, dueño)
+VALUES ('Fiat', 'Cronos', 2024, 1);
+
+2) INSERT INTO personas (id, nombre, apellido, dni, domicilio)
+   VALUES 
+        ('5', 'Horacio', 'Rossi', '36800100', '5');
+   INSERT INTO propiedades ('id', 'calle', 'altura', 'piso', 'tipo')
+   VALUES 
+       (5, 'Av.San Martin', 1250, 7, 'departamento');
+
+3) INSERT INTO personas (id, nombre, apellido, dni)
+   VALUES 
+           (6, 'Carla', 'Rodriguez', 54888222);
+
+4) INSERT INTO personal (id, dni, salario, rol, sucursal)
+   VALUES 
+          (6, 54888222, 118000, 'cajero', 11);
+
+5) INSERT INTO propiedades (id, calle, altura, piso, tipo)
+   VALUES 
+       (6, 'Lascano', 8900, NULL, PH);
+       (7, 'Villa Urtuzar', 2190, NULL, Casa)
+       (8, 'San Ignacio, 3590, 3, Depatamento);
+
+6) INSERT INTO ventas (id, vendedor, producto, monto)
+   VALUES 
+         (4, 2, 'Lavarropas', 120000)
+         (5, 2, 'Lavarropas', 120000)
+         (6, 2, 'Lavarropas', 120000);
+
+7) INSERT INTO personas
+   VALUES
+       (7,'Juan', 'Meier', 2199077, 6)             /*La propiedad 6 esta definida en la actividad 5  */
+       (8, 'Agustina', 'Martinez', 29008712, 6);
+
+   INSERT INTO autos (patente, marca, modelo, año, dueño)
+   VALUES 
+         (ABHSA90, 'Chevrolet', 'Corsa', 2005, 7)
+         (KLIOS12, 'Fiat', 'Clio', 2008, 8);
+
+8) INSERT INTO personal (id, dni, salario, rol, sucursal)
+   VALUES 
+         (7, 89100233, 450000, 'Cajero', 3)
+         (8, 38912566, 245000, 'Cajero', 3)
+         (9, 45900123, 200000, 'Cajero', 3);
+
+9) INSERT INTO personas (nombre, apellido, dni, domicilio)
+   VALUES
+          ('Jorje', 'Lopez', 33777888, 3);
+
+10) UPDATE personas
+    SET dni= 27100200
+    WHERE nombre= 'Carlos' AND apellido= 'Rodriguez';
+
+11) UPDATE autos 
+    SET dueño = 6
+    WHERE dueño= 3;
+
+12) UPDATE ventas
+    SET vendedor= 99
+    WHERE vendedor= 55;
+
+13) UPDATE personas
+    SET dni= dni+(dni%2)
+    
+    UPDATE personas
+    SET dni= dni + 1;
+
+14) ALTER TABLE autos ADD COLUMN precio DECIMAL (10, ?)
+    UPDATE precios
+    SET precio= 10000* (2024-anio)(YEAR(CURRENT_TIMESTAP-anio))
+
+15) ALTER TABLE sucursales ADD COLUMN inaguracion DATE;
+    UPDATE sucursales
+    SET inaguracion= '2000-01-01';
+
+16) UPDATE personas
+    SET domicilio = 1
+    
+
+17) UPDATE personal
+    SET= salario* 1,28 
+    WHERE rol = 'Cajero' AND sucursal IN (24, 32)  
+
+19) UPDATE personal
+    SET= salario + 60000
+    WHERE DATEDIFF (CURRENT_TIMESTAP, f_ingreso) >= 10*365;
+
+20) UPDATE sucursales
+    SET m2= m2*0.9;
+
+21) DELETE FROM  sucursales
+    WHERE empleados AND sucursal IN (32,33);    
+
+    DELETE FROM personal;
+  
+22) DELETE FROM personal
+    WHERE rol= 'repositor' AND sucursal= 25;
+
+23) DELETE FROM autos
+    WHERE marca=  'Peugeot';
+
+24) DELETE FROM autos 
+    WHERE nro_chasis= 'A' AND tipo= casa AND calle= 'Baigorria';
+
+    DELETE FROM propiedades
+    WHERE calle= 'Baigorria' AND tipo= 'Casa';
+
+25) DELETE FROM personas
+    WHERE dni= 45455454;
+
+26) DELETE FROM autos
+    WHERE año  < 2000;
+
+27) DELETE FROM personal
+    WHERE rol= 'Cajero' AND salario > 18000;
+
+28) DELETE FROM personas
+    WHERE id= 2;
+
+29) DELETE FROM personal
+
+30) DELETE FROM sucursales;
